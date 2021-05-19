@@ -63,7 +63,7 @@ For the ```cnn-asl.py``` script, the user is able to modify the following parame
 For the ```use-model.py``` script the user is able to modify the following parameters, but once again, this is not necessary:
 
 ```
--m, --model_anme: str <name-of-model-to-load>, default = "saved_model.json"
+-m, --model_name: str <name-of-model-to-load>, default = "saved_model.json"
 -t, --train_data: str <name-of-train-data>, default = "asl_alphabet_train_subset"
 -u, --unseen_image: str <name-of-input-image>, default = "unseen_img_test1.png"
 ````

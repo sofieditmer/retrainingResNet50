@@ -91,12 +91,14 @@ Taken together, the classification report as well as the learning curves of the 
 <img src="https://github.com/sofieditmer/self-assigned/blob/main/output/model_loss_accuracy_history.png" width="500">
 Figure 7: Loss/accuracy learning curves of the model. <br>
 
-Another aspect of the project was the visualization of the feature map of the last convolutional layer of the network. This method was implemented in order to provide the user with an insight into how the model is working “qualitatively”. In other words, visualizing the feature map of the last convolutional layer of the network enables the user to see exactly which parts of the original image the model is paying attention to when making its predictions. The activation heatmaps superimposed on 4 test images are shown below. In all four instances, it becomes evident that the model is paying attention to the center of the image, suggesting that the most informative features are located here. However, it is important to remark that the weighted average accuracy obtained by the model was only 4%, suggesting that these activation heatmaps might not be very enlightening. 
+<br> Another aspect of the project was the visualization of the feature map of the last convolutional layer of the network. This method was implemented in order to provide the user with an insight into how the model is working “qualitatively”. In other words, visualizing the feature map of the last convolutional layer of the network enables the user to see exactly which parts of the original image the model is paying attention to when making its predictions. The activation heatmaps superimposed on 4 test images are shown below. In all four instances, it becomes evident that the model is paying attention to the center of the image, suggesting that the most informative features are located here. However, it is important to remark that the weighted average accuracy obtained by the model was only 4%, suggesting that these activation heatmaps might not be very enlightening. 
 
-<img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test1_superimposed_heatmap.png" width="200">
-<img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test2_superimposed_heatmap.png" width="200">
-<img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test3_superimposed_heatmap.png" width="200">
-<img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test4_superimposed_heatmap.png" width="200"> 
+<p float="left">
+  <img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test1_superimposed_heatmap.png" width="200" />
+  <img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test2_superimposed_heatmap.png" width="200" /> 
+  <img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test3_superimposed_heatmap.png" width="200" />
+  <img src="https://github.com/sofieditmer/self-assigned/blob/main/output/unseen_img_test4_superimposed_heatmap.png" width="200" />
+</p> 
 Figure 8: Superimposed activation heatmaps on unseen images. <br>
 
 ### License <br>

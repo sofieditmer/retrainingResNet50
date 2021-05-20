@@ -221,7 +221,7 @@ class CNN_classifier:
     
     def create_XY(self, data, labels, dimension=224):
         """
-        Method creates trainX, trainY as well as testX and testY. It creates X, which is an array of images (corresponding to trainX and testX) and Y which is a list of the image labels (corresponding to trainY and testY). Hence, with this we can create the training and validation datasets. 
+        This method creates trainX, trainY as well as testX and testY. It creates X, which is an array of images (corresponding to trainX and testX) and Y which is a list of the image labels (corresponding to trainY and testY). Hence, with this we can create the training and validation datasets. 
         """
         # Create empty array, X, for the images, and an empty list, y, for the image labels
         X = np.empty((0, dimension, dimension, 3))        
@@ -252,7 +252,7 @@ class CNN_classifier:
     
     def normalize_binarize(self, X_train, y_train, X_test, y_test):
         """
-        Method that normalizes the training and validation data and binarizes the training and test labels. Normalizing is done by dividing by 255 to compress the pixel intensity values down between 0 and 1 rather than 0 and 255. Binarizing is performed using the LabelBinarizer function from sklearn. We binarize the labels to convert them into one-hot vectors. 
+        This method normalizes the training and validation data and binarizes the training and test labels. Normalizing is done by dividing by 255 to compress the pixel intensity values down between 0 and 1 rather than 0 and 255. Binarizing is performed using the LabelBinarizer function from sklearn. We binarize the labels to convert them into one-hot vectors. 
         """
         # Normalize training and test data
         X_train_scaled = (X_train - X_train.min())/(X_train.max() - X_train.min()).astype("float")
@@ -290,7 +290,7 @@ class CNN_classifier:
         class1 = Dense(256,
                        activation='relu')(flat1) # the flattening layer is the input layer
         
-        drop1 = Dropout(0.4)(class1) # adding dropout layer to reduce overfitting 
+        drop1 = Dropout(0.2)(class1) # adding dropout layer to reduce overfitting 
         
         output = Dense(26, # we have 26 classes, i.e. 26 letters to predict 
                        activation='softmax')(drop1)
@@ -370,7 +370,7 @@ class CNN_classifier:
         # If the user has not performed data augmentation
         if augment_data == "False":
             
-            # Train model on the original and augmented data 
+            # Train model on the original data only 
             model_history = model.fit(X_train_scaled, y_train_binarized, 
                                       validation_data=(X_test_scaled, y_test_binarized),
                                       batch_size = batch_size,

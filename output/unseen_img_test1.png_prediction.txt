@@ -1,1 +1,0 @@
-The predicted class of the unseen_img_test1.png made by the model is {'D'}
